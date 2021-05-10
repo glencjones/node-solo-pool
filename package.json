@@ -1,6 +1,6 @@
 {
   "name": "@turtlecoin/solo-pool",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "Pass-Thru Solo Mining Pool",
   "main": "dist/index.js",
   "bin": "./run.js",
