@@ -39,9 +39,11 @@ export class BlockchainMonitor extends EventEmitter {
 
         this.timer.on('tick', async () => {
             try {
-                const data = await this.node.blockTemplate(walletAddress, 8);
+                const hinfo = await this.node.height();
 
-                if (data.height > this.state.height) {
+                if (hinfo.networkHeight > this.state.height) {
+                    const data = await this.node.blockTemplate(walletAddress, 8);
+
                     this.state = data;
 
                     this.emit('update', data);
