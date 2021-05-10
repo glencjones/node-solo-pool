@@ -67,7 +67,7 @@ export class Miner extends EventEmitter {
             rate += info.vardiff.hashrate;
         }
 
-        return Math.round(rate / this.m_ids.size);
+        return rate;
     }
 
     public get last_touch (): number {
